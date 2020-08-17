@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Instagram</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="shortcut icon" href="{% static 'pics/icon.png' %}">
+  </head>
+
+  <body>
+    <div class="container maincontainer">
+      <div class="row">
+        <!-- Iphone photo -->
+        <div class="col-md-6 border" align="center">
+          <img id="iphonephoto" src="{% static 'pics/iphone.png' %}" alt="photo of an iphone running ig">
+        </div>
+        <!-- Sign up form -->
+        <div class="col-md-6">
+          <div class="">
+            <div class="formborder" align="center">
+              <img src="{% static 'pics/instagram.png' %}" alt="instagram word picture" id="instatext">
+              <p>Sign up to see photos and videos from your friends.</p>
+              <!-- Div with the whole form -->
+              <div>
+                <form action="register" method="POST">
+                    {% csrf_token %}
+                  <input type="text" name="username" placeholder="Username"><br>
+                  <input type="text" name="first_name" placeholder="Firstname"><br>
+                  <input type="text" name="last_name" placeholder="Lastname"><br>
+                  <input type="text" name="email" placeholder="Email"><br>
+                  <input type="password" name="password1" placeholder="Password"><br>
+                  <input type="password" name="password2" placeholder="Confirm Password"><br>
+
+                  <input type="submit"  >
+
+                </form>
+              </div>
+            </div>
+          </div>
+                <div>
+                    {% for message in messages %}
+
+                    <h3> {{message}}    </h3>
+                    {% endfor %}
+                </div>
+          <div class="formborder alignboxes2">
+            <!-- having an account -->
+            <p class="aligntext">Have an account?<a href="#"> <form action="login" method="get">
+                &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp   &nbsp  &nbsp   &nbsp   &nbsp   &nbsp   &nbsp   &nbsp   &nbsp   &nbsp <input type="submit" value="Login" 
+                     name="Submit" id="frm1_submit" />
+            </form> </a></p>
+          </div>
+          <div class="formborder2 alignboxes2" >
+            <!-- downloads -->
+            <p class="aligntext">Get the app.</p>
+            <img class="downloadbuttons" src="{% static 'pics/appstore.png' %}" alt="download from app store">
+            <img class="downloadbuttons" src="{% static 'pics/google.png' %}" alt="download from Google play store">
+            <img class="downloadbuttons" src="{% static 'pics/microsoft.png' %}" alt="download from microsoft store">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+    <!-- Footer  -->
+    <footer class="container fullfooter">
+      <nav class="row">
+          <div class="col-md-1">
+            <span> <a href="#">ABOUT US</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">SUPPORT</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">PRESS</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">API</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">JOBS</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">PRIVACY</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">TERMS</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">DIRECTORY</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">PROFILES</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">HASHTAGS</a></span>
+          </div>
+          <div class="col-md-1">
+            <span><a href="#">LANGUAGE</a></span>
+          </div>
+          <div class="col-md-1">
+            <span>© 2018 INSTAGRAM</a></span>
+          </div>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

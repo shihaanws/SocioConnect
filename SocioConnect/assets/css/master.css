@@ -1,0 +1,88 @@
+/* Type selectors */
+span {
+  font-weight: bold;
+}
+p {
+  text-align: center;
+}
+
+a:link {
+  color: green;
+}
+
+/* ID Selectors */
+#iphonephoto {
+  display: inline-flex;
+  width: 465px;
+  height: 700px;
+  align-content: center;
+}
+
+#instatext {
+  width: 100%;
+}
+
+#psize {
+  font-size: 13px;
+}
+
+.alignboxes {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.alignboxes2 {
+  margin-top: 10px;
+}
+
+.aligntext {
+  margin: 25px;
+}
+
+/* Class Selectors */
+
+.maincontainer {
+  margin-top: 50px;
+}
+
+/* .border {
+  border: solid red 2px;
+} */
+
+.border2 {
+  border: solid green 2px;
+
+}
+
+.formborder {
+  border: solid 1px lightgrey;
+  width: 400px;
+}
+
+.formborder2 {
+  width: 400px;
+}
+
+/* .bluebutton {
+  width: 200px;
+} */
+
+.downloadbuttons {
+  width: 130px;
+  height: 40px;
+}
+
+.fullfooter {
+  /* width: 60%; */
+  margin-top: 7%;
+  margin-bottom: 3%;
+  font-size: 10px;
+}
+
+.lining {
+  width: 1000px;
+}
+
+.linesize {
+  width: 85px;
+}
