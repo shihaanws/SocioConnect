@@ -1,9 +1,9 @@
 # SocioConnect
 Django - User Registration and Login for customizable Social Apps (PostgreSQL)
 
-One stop website  enabled with User SignUp and Login for multiple Social media apps.
+* Basic website enabled with User Sign Up and Login for multiple Social media apps.
 
-Database 
+* Media storage and App customization using PostgreSQL database
 
 
 
